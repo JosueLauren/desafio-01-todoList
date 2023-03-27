@@ -1,0 +1,78 @@
+
+
+.todoItem {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 0.75rem;
+    padding: 1rem 1.25rem;
+    border: 1px solid var(--gray-400);
+    border-radius: 8px;
+    background: var(--gray-500);
+    margin-bottom: 0.875rem;
+}
+
+
+.todoItem label {
+    position: relative;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: -2px;
+    height: 19px;
+    width: 19px;
+    background-color: var(--gray-400);
+    border-radius: 100%;
+    border: 2px solid var(--blue);
+    cursor: pointer;
+}
+
+.checkmark::after {
+    content: '';
+    position: absolute;
+    display: none;
+    left: 7px;
+    top: 4px;
+    width: 4px;
+    height: 8px;
+    border: solid var(--gray-100);
+    border-width: 0 1px 1px 0;
+    transform: rotate(45deg);
+}
+
+.todoItem label input:checked ~ .checkmark {
+    background-color: var(--purple-dark);
+    border: 0;
+}
+
+.todoItem label input:checked ~ .checkmark::after {
+    display: block;
+}
+
+
+.todoItem p {
+    color: var(--gray-100);
+    font-size: 0.875rem;
+    line-height: 140%;
+    text-align: left;
+    margin-top: -4px;
+}
+
+p.taskCompleted {
+    text-decoration: line-through;
+    color: var(--gray-300);
+}
+
+.todoItem button {
+    background: transparent;
+    border: 0;
+    color: var(--gray-300);
+    cursor: pointer;
+    transition: color .1s;
+}
+
+.todoItem button:hover {
+    color: var(--danger);
+}

@@ -1,0 +1,56 @@
+
+.createTodoForm {
+    margin: -3.75rem auto 0;
+    max-width: 46rem;
+    width: 100%;
+    display: flex;
+    padding: 0 1rem;
+    flex-wrap: wrap;
+    gap: 0.875rem;
+}
+
+.createTodoField {
+    flex: 1;
+    padding: 1rem;
+    background: var(--gray-500);
+    margin-right: 0.5rem;
+    border: 1px solid var(--gray-700);
+    border-radius: 8px;
+    color: var(--gray-100);
+}
+
+.createTodoField::placeholder {
+    color: var(--gray-300);
+}
+
+.createTodoField:focus {
+    outline: transparent;
+    box-shadow: 0 0 0 2px var(--purple-dark);
+  }
+
+.createTodoButton {
+    padding: 1rem;
+    border: 0;
+    background: var(--blue-dark);
+    border-radius: 8px;
+    cursor: pointer;
+    color: var(--gray-100);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    transition: background-color 0.1s;
+}
+
+.createTodoButton:hover {
+    background: var(--blue);
+}
+
+@media screen and (max-width: 500px) {
+    .createTodoField {
+        margin: 0;
+    }
+    .createTodoButton {
+        flex: 1;
+    }
+}
